@@ -7,6 +7,7 @@ Project for studying HTML, SCSS and CSS animation
 
 - SCSS Boilerplate from [DesenvolveWeb](https://github.com/desenvolvweb/basic-front-boilerplate)
 - Design from uixtube at [FreePik](https://br.freepik.com/fotos-vetores-gratis/negocio)
+- Woman Photo from drobotdean at [FreePik](https://br.freepik.com/fotos-vetores-gratis/mao)
 
 ## Technologies
 - [Parcel](https://pt.parceljs.org/)
