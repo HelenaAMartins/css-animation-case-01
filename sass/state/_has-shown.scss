@@ -1,0 +1,15 @@
+@keyframes has-shown {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.has-shown {
+  animation: has-shown 2s $transition-function-ease-in-out-circ forwards;
+}
