@@ -1,38 +1,33 @@
 // @see https://desenvolvimentoparaweb.com/css/css-breakpoints-maneira-correta/
 
 @mixin breakpoint($point) {
-  @if $point == small-only {
-    @media (max-width: 37.4375em) { // 599px
+
+  @if $point == tablet {
+    @media (min-width: 48em) { // 768px
       @content;
     }
   }
 
-  @else if $point == small-up {
-    @media (min-width: 37.5em) { // 600px
+  @else if $point == small-desktop {
+    @media (min-width: 64em) { // 1024px
       @content;
     }
   }
 
-  @else if $point == medium-only {
-    @media (max-width: 56.1875em) { // 899px
-      @content;
-    }
-  }
-
-  @else if $point == medium-up {
-    @media (min-width: 56.25em) { // 900px
-      @content;
-    }
-  }
-
-  @else if $point == large-only {
-    @media (max-width: 74.9375em) { // 1199px
-      @content;
-    }
-  }
-
-  @else if $point == large-up {
+  @else if $point == desktop {
     @media (min-width: 75em) { // 1200px
+      @content;
+    }
+  }
+
+  @else if $point == large-desktop {
+    @media (min-width: 87.5em) { // 1400px
+      @content;
+    }
+  }
+
+  @else if $point == xlarge-desktop {
+    @media (min-width: 93.75em) { // 1500px
       @content;
     }
   }

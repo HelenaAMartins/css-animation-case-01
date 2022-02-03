@@ -49,11 +49,15 @@
 // Hero
 // ==========================================================================
  @import "layout/hero";
+ @import "layout/social";
+ @import "layout/picture";
+ @import "layout/text";
 
 body{
   background-image: url("../img/background.png");
   width: 100%;
   height: 100vh;
+  background-size: cover;
 }
 
 // ==========================================================================
