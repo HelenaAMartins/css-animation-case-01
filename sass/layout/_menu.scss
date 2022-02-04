@@ -1,0 +1,145 @@
+.modal__wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--color-dpw-primary);
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.menu-btn span {
+  background-color: var(--color-dpw-primary);
+  width: 60%;
+  margin-bottom: 2px;
+  height: 3px;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+#active {
+  display: none;
+}
+
+#active:checked ~ .modal__wrapper {
+  clip-path: circle(75%);
+}
+.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 6;
+  right: 5px;
+  top: 0px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 0 0 25px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  background: var(--color-dpw-secondary);
+  transition: all 0.3s ease-in-out;
+
+  @include breakpoint("tablet"){
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+  }
+}
+#active:checked ~ .menu-btn span {
+  background-color: #fff;
+
+  &:first-child {
+    transform: rotate(50deg) translate(5px, 2px);
+  }
+
+  &:nth-child(2) {
+    opacity: 0;
+  }
+
+  &:last-child {
+    transform: rotate(-50deg) translate(5px, -2px);
+  }
+}
+
+#active:checked ~ .modal__wrapper .mySocial__item {
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+}
+
+.modal__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  height: 100vh;
+
+  & li {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include breakpoint("tablet"){
+    font-size: 30px;
+
+    }
+
+    & a {
+      color: #fff;
+    }
+  }
+}
+
+.mySocial {
+  display: flex;
+  width: 100%;
+  z-index: 6;
+  position: relative;
+  justify-content: center;
+
+  & .mySocial__item {
+    width: 30px;
+    height: 30px;
+
+    &:nth-child(2) {
+      margin: 0 20px;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
