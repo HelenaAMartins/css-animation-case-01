@@ -1,33 +1,28 @@
 .hero {
-  margin: 0 auto;
-  width: 100%;
-  min-height: 100vh;
   font-family: "FormulaBold";
+  margin: 0 auto;
+  min-height: 100vh;
   padding: 20px;
+  width: 100%;
 
-  @include breakpoint('tablet'){
+  @include breakpoint("tablet") {
     padding: 40px 25px;
   }
 
-  @include breakpoint('small-desktop'){
+  @include breakpoint("small-desktop") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 100px auto;
-   max-width: 1820px;
-
- }
-}
-
-.hero__content {
-
-  @include breakpoint('small-desktop'){
-    display: grid;
-    grid-template-columns: 55% auto;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    align-items: center;
+    max-width: 1820px;
   }
 }
 
-
-
+.hero__content {
+  @include breakpoint("small-desktop") {
+    align-items: center;
+    display: grid;
+    grid-column-end: -1;
+    grid-column-start: 1;
+    grid-template-columns: 55% auto;
+  }
+}

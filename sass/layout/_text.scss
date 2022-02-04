@@ -9,7 +9,6 @@
     margin-top: -105px;
     padding-left: 22%;
   }
-
 }
 
 .info__title {
@@ -18,12 +17,12 @@
 
   & p {
     font-size: 20px;
-    margin-left: 24px;
     margin-bottom: -40px;
+    margin-left: 24px;
   }
   & b {
-    font-size: 38px;
     font-family: "FormulaBold";
+    font-size: 38px;
   }
 
   & .largeText {
@@ -43,8 +42,8 @@
 
   @include breakpoint("tablet") {
     margin-bottom: 80px;
-    transform: rotate(-8deg);
     padding: 0 0 0 35px;
+    transform: rotate(-8deg);
 
     .font__agency {
       font-size: 115px;
@@ -52,8 +51,8 @@
 
     & p {
       font-size: 40px;
-      margin-left: 52px;
       margin-bottom: -72px;
+      margin-left: 52px;
     }
 
     & b {
@@ -79,7 +78,6 @@
 
     & b {
       font-size: 75px;
-
     }
 
     & span.light {
@@ -103,7 +101,6 @@
       padding-top: 30px;
     }
   }
-
 }
 
 .white {
@@ -126,9 +123,9 @@
     grid-template-columns: 48% auto;
 
     & div {
-      padding-top: 55px;
       align-items: flex-start;
       padding-left: 15px;
+      padding-top: 55px;
     }
   }
 
@@ -153,83 +150,82 @@
 }
 
 .info__button {
+  align-items: center;
   background-color: var(--color-dpw-secondary);
+  border-radius: 25px;
   border: 2px solid var(--color-dpw-secondary);
   box-sizing: border-box;
   color: var(--color-dpw-primary);
-  border-radius: 25px;
-  width: 245px;
-  padding: 5px 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
   cursor: pointer;
   display: flex;
-  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
   justify-content: space-evenly;
+  padding: 5px 0;
   text-transform: uppercase;
   transition: all 0.5s;
+  width: 245px;
 
   &::before {
     background: url("../img/iconArrow.png");
     content: "";
-    width: 34px;
     height: 34px;
     transition: all 0.5s;
+    width: 34px;
   }
 
   &:hover {
-    background: #fff;
-    border-color: #fff;
+    background: var(--color-webfatorial-white);
+    border-color: var(--color-webfatorial-white);
 
     &::before {
       transform: translateX(4px);
     }
   }
 
-  @include breakpoint('small-desktop'){
-    width: 210px;
+  @include breakpoint("small-desktop") {
     font-size: 17px;
+    width: 210px;
   }
 
-  @include breakpoint('desktop'){
-    width: 245px;
+  @include breakpoint("desktop") {
     font-size: 20px;
+    width: 245px;
   }
-
 }
 
 .info__localisation {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding-top: 60px;
   padding-bottom: 20px;
+  padding-top: 60px;
   position: relative;
+  width: 100%;
 
   &::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 223px;
-    height: 2px;
-    width: 80%;
-    transform: translate(-50%, -50%);
     background: linear-gradient(
       90deg,
       rgba(67, 1, 90, 1) 0%,
       rgba(255, 169, 1, 1) 50%,
       rgba(67, 1, 90, 1) 100%
     );
+    bottom: 223px;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 80%;
   }
 
   @include breakpoint("tablet") {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    width: 90%;
     grid-gap: 60px;
-    padding-top: 0;
+    grid-template-columns: repeat(3, auto);
     margin: 0 auto;
+    padding-top: 0;
+    width: 90%;
 
     &::before {
       bottom: 0;
@@ -237,27 +233,24 @@
   }
 
   @include breakpoint("small-desktop") {
-    margin: initial;
     grid-gap: 12px;
+    margin: initial;
     width: 100%;
   }
 
   @include breakpoint("desktop") {
-
     grid-gap: 35px;
   }
 
-  @include breakpoint("xlarge-desktop"){
+  @include breakpoint("xlarge-desktop") {
     grid-gap: 60px;
   }
-
-
 }
 
 .info__join {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-bottom: 15px;
 
   & h3 {
@@ -272,13 +265,9 @@
   @include breakpoint("small-desktop") {
     align-items: flex-end;
     padding-bottom: 0;
-
-    & span {
-      // letter-spacing: 2.5px;
-    }
   }
 
-  @include breakpoint("xlarge-desktop"){
+  @include breakpoint("xlarge-desktop") {
     & h3 {
       font-size: 50px;
     }
@@ -315,7 +304,7 @@
     }
   }
 
-  @include breakpoint("small-desktop"){
+  @include breakpoint("small-desktop") {
     grid-template-columns: 230px auto;
   }
 
@@ -325,16 +314,13 @@
     padding-top: 35px;
   }
 
-  @include breakpoint("large-desktop"){
+  @include breakpoint("large-desktop") {
     padding-top: 30px;
-
-
   }
 
   // @include outro
   // margin-left: -50px;
   //   padding-top: 0;
-
 }
 
 .info__contact {
@@ -352,11 +338,11 @@
     padding-top: 0;
   }
 
-  @include breakpoint("small-desktop"){
+  @include breakpoint("small-desktop") {
     font-size: 20px;
   }
 
-  @include breakpoint("desktop"){
+  @include breakpoint("desktop") {
     font-size: 23px;
   }
 }
@@ -366,11 +352,11 @@
   text-transform: uppercase;
   font-size: 25px;
 
-  @include breakpoint("small-desktop"){
+  @include breakpoint("small-desktop") {
     font-size: 20px;
   }
 
-  @include breakpoint("desktop"){
+  @include breakpoint("desktop") {
     font-size: 25px;
   }
 }
@@ -451,12 +437,9 @@
     & span {
       font-size: 20px;
     }
-
-
   }
 
-  @include breakpoint("desktop"){
-
+  @include breakpoint("desktop") {
     &::before {
       left: -8;
     }
@@ -470,7 +453,7 @@
     }
   }
 
-  @include breakpoint("large-desktop"){
+  @include breakpoint("large-desktop") {
     &::before {
       left: -10px;
     }
@@ -499,7 +482,7 @@
     padding-top: 0;
   }
 
-  @include breakpoint('small-desktop'){
+  @include breakpoint("small-desktop") {
     & h4 {
       font-size: 22px;
     }
@@ -509,7 +492,7 @@
     }
   }
 
-  @include breakpoint('desktop'){
+  @include breakpoint("desktop") {
     & h4 {
       font-size: 30px;
     }
